@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Sora:wght@100..800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Cores */
+  --vinho: #5D0D18;
+  --off-white: #FFF9EB;
+  --verdinho: #9FB2AC;
+  --texto: #2E1B1B;
+  
+  /* Tipografia */
+  --font-titulos: 'Fraunces', serif;
+  --font-corpo: 'Sora', sans-serif;
+
+  font-family: var(--font-corpo);
+}
+
+body {
+  background-color: var(--off-white);
+  color: var(--texto);
+  margin: 0;
+  padding: 0;
+  height: 100vh;    /* garante que o corpo tenha exatamente a altura da tela */
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.8rem 5%; /* espaçamento top/bottom (rem usa o tamanho da fonte do navegador) e espa porcentagem pras laterais */
+    border-bottom: 3px solid var(--vinho);
+    height: 10vh;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--off-white);
+}
+
+.logo{
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    font-weight: 550;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: var(--texto);
+    position: relative; /* precisa pra funciona a barrinha que aparece embaixo da sessão */
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1.5px; 
+    padding-bottom: 0.4rem; 
+}
+
+.nav-links a::after{ /* esse after cria uma peça de design fantasma que o css pode usar */
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2.5px;
+    background-color: var(--vinho);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
+}
+
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 90vh;
+    padding-bottom: 0%;
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8%;
+    margin-left: 12%;
+}
+
+.hero-text h1{
+    font-family: var(--font-titulos);
+    font-size: 10rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.hero-text p{
+    font-size: 1.5rem;
+    margin-top: 0;
+    letter-spacing: 2px;
+    margin-bottom: 5rem;
+}
+
+.hero-img img{
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-img{
+    margin-bottom: 2rem;
+    margin-right: 3rem;
+}
+
+.social-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, filter 0.1s ease;  /* transiciona bonitinho no hover */
+}
+
+.social-container img {
+  width: 2.5rem; 
+  height: auto;
+
+}
+
+.social-container a:hover {
+  transform: translateY(-8px); /* levanta o ícone */
+  filter: brightness(0) saturate(100%) invert(18%) sepia(34%) saturate(3755%) hue-rotate(338deg) brightness(87%) contrast(97%);
+}
+
+
+
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Empilha um em cima do outro */
+    text-align: center;     /* Centraliza o texto no mobile */
+    justify-content: center;
+    gap: 2rem;              /* Dá um espaço entre o texto e a foto */
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;        /* Diminui o título para não transbordar no celular */
+  }
+
+  .hero-text p {
+    font-size: 0.7rem;        /* Diminui o título para não transbordar no celular */
+  }
+}
