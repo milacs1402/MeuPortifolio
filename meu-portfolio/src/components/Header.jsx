@@ -1,13 +1,13 @@
-function Header() {
+function Header({ setSection }) {
     return(
         <header className="cabecalho"> 
             <div className="logo">Camila Silva</div>
                 <nav>
                     <ul className="nav-links">
-                        <li><a href="#home" className="link-ativo">Home</a></li>
-                        <li><a href="#sobremim" >Sobre Mim</a></li>
-                        <li><a href="#projetos">Projetos</a></li>
-                        <li><a href="#contato">Contato</a></li>
+                        <li><a onClick={() => setSection('home')} >Home</a></li>
+                        <li><a onClick={() => setSection('about')} >Sobre Mim</a></li>
+                        <li><a onClick={() => setSection('projects')} >Projetos</a></li>
+                        <li><a onClick={() => setSection('contact')} >Contato</a></li>
                     </ul>
                 </nav>
         </header>

@@ -11,7 +11,7 @@ function SocialLinks() {
       <a href="https://github.com/milacs1402" target="_blank" rel="noreferrer">
         <img src={iconGithub} alt="Github" />
       </a>
-      <a href="https://linkedin.com/in/seu-user" target="_blank" rel="noreferrer">
+      <a href="https://www.linkedin.com/in/camila-silva-089167273/" target="_blank" rel="noreferrer">
         <img src={iconLinkedin} alt="Linkedin" />
       </a>
     </div>

@@ -18,6 +18,7 @@
   --font-corpo: 'Sora', sans-serif;
 
   font-family: var(--font-corpo);
+  height: 100%;
 }
 
 body {
@@ -26,6 +27,10 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;    /* garante que o corpo tenha exatamente a altura da tela */
+}
+
+.main-content{
+  animation: fadeIn 0.8s ease-out;
 }
 
 .cabecalho{
@@ -63,6 +68,7 @@ body {
     font-weight: 400;
     letter-spacing: 1.5px; 
     padding-bottom: 0.4rem; 
+    cursor: pointer;
 }
 
 .nav-links a::after{ /* esse after cria uma peça de design fantasma que o css pode usar */
@@ -88,6 +94,7 @@ body {
     padding: 0 5%;
     height: 90vh;
     padding-bottom: 0%;
+    box-sizing: border-box;
 }
 
 .hero-text{
@@ -115,6 +122,7 @@ body {
 .hero-img img{
     width: 100%;
     max-width: 560px;
+    max-height: 85vh;
     height: auto;
     object-fit: cover;
 }
@@ -150,8 +158,56 @@ body {
   filter: brightness(0) saturate(100%) invert(18%) sepia(34%) saturate(3755%) hue-rotate(338deg) brightness(87%) contrast(97%);
 }
 
+.sobre-mim{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.sobre-text{
+  background-color: #5D0D18;
+  padding: 2% 4%;
+}
+
+.sobre-text h1{
+  font-family: var(--font-titulos);
+  font-size: 7rem;
+  padding-bottom: 2%;
+}
+
+.sobre-text p{
+  font-size: 1.5rem;
+  width: 45vw;
+  padding-bottom: 2%;
+}
+
+.sobre-cards div{
+  padding-left:10%;
+}
+
+.card-educa{
+  background-color: var(--verdinho);
+}
+
+.card-tec{
+  background-color: var(--verdinho);
+}
+
+.card-idioma{
+  background-color: var(--verdinho);
+}
 
 
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); /* Começa um pouco abaixo */
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); /* Sobe para a posição original */
+  }
+}
 
 @media (max-width: 768px) {
   .hero {
