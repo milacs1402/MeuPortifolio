@@ -165,7 +165,6 @@ body {
 }
 
 .sobre-text{
-  background-color: #5D0D18;
   padding: 2% 4%;
 }
 
@@ -181,21 +180,45 @@ body {
   padding-bottom: 2%;
 }
 
+.sobre-cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--off-white);
+  margin-right: 3%;
+  margin-top: 2%;
+  width: 100%;
+}
+
 .sobre-cards div{
-  padding-left:10%;
+  background-color: var(--verdinho);
+  padding: 2% 10% 4% 10%;
+  border-radius: 30px;
+  height: 90%;
+  width: 80%;
+  box-shadow: -6px 8px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.3s ease;
 }
 
-.card-educa{
-  background-color: var(--verdinho);
+.sobre-cards div:hover{
+  background-color: var(--vinho);
+  transform: translateY(-0.5rem);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); 
 }
 
-.card-tec{
-  background-color: var(--verdinho);
+.sobre-cards h3{
+  font-family: var(--font-titulos);
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 3%;
 }
 
-.card-idioma{
-  background-color: var(--verdinho);
+.sobre-cards ul{
+  font-size: 1.2rem;
 }
+
 
 
 @keyframes fadeIn {
