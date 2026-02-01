@@ -9,12 +9,14 @@ function ProjectCard({title, description, image, images, githubLink, techs}) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     
     // se não tiver array de images, usa só a image única
-    const imageArray = images && images.length > 0 ? images : [image];
+    const imageArray = images && images.length > 0 ? images : [image]; 
+    /* operador ternario
+    condição ? seVerdadeiro : seFalso */
     
     // função pra ir pra imagem anterior
     const prevImage = () => {
         setCurrentImageIndex((prevIndex) => 
-            prevIndex === 0 ? imageArray.length - 1 : prevIndex - 1
+            prevIndex === 0 ? imageArray.length - 1 : prevIndex - 1 /* cria o efeito circular do carrossel */
         );
     };
     
@@ -53,9 +55,8 @@ function ProjectCard({title, description, image, images, githubLink, techs}) {
                     
 
                     {imageArray.length > 1 && ( /* só mostra as setinhas se tiver mais de uma img */
-                        <>
-                            
-
+                        
+                        <> {/* fragment - serve pra agrupar os elementos sem ter que criar uma div */}
                             <button 
                             className="carousel-button-prev"
                             onClick={prevImage}
@@ -80,7 +81,7 @@ function ProjectCard({title, description, image, images, githubLink, techs}) {
                                     />
                                 ))}
                             </div>
-                        </>
+                        </> /* fecho do fragment */
                     )}
                     
                 </div>

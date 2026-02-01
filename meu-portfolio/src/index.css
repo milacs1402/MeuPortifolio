@@ -73,6 +73,19 @@ body {
     cursor: pointer;
 }
 
+.nav-links a.active {
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--vinho)
+}
+
 .nav-links a::after{ /* esse after cria uma peça de design fantasma que o css pode usar */
     content:'';
     position: absolute;
@@ -425,6 +438,107 @@ body {
   height: 0.7rem;
 }
 
+/* === CONTATO === */
+
+.contato-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.contato{
+  display: flex;
+  background-color: var(--verdinho);
+  border-radius: 3rem;
+  overflow: hidden;
+  max-width: 80rem;
+  width: 100%;
+  min-height: 25rem;
+  height: 35rem;
+  margin-top: 2%;
+}
+
+.line{
+  display: flex;
+  align-items: center;
+  margin: 3rem;
+}
+
+.line hr{
+  border: none;
+  border-top: 0.125rem solid  var(--texto);
+  flex: 1;
+}
+
+.line span{
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--texto);
+  transform: rotate(45deg);
+}
+
+.contato-info{
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 3rem;
+  overflow: hidden;
+  max-width: 70rem;
+  width: 100%;
+  min-height: 25rem;
+  background-color: var(--off-white);
+  margin: 2%;
+  gap: 1.5rem;
+}
+
+.contato-info img{
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.contato-info p{
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin: 4rem 2rem 0 2rem;
+  text-align: center;
+}
+
+.contato-item{
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+.contato-item a{
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.contato-item a:hover{
+  color: var(--vinho);
+  text-decoration: underline;
+}
+
+.contato-frase{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.contato-frase h1{
+  font-family: var(--font-titulos);
+  font-size: clamp(7rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--off-white);
+  line-height: 1.2;
+  text-align: left;
+}
 
 @keyframes fadeIn {
   from { 
