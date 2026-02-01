@@ -1,3 +1,5 @@
+import React from 'react';
+
 function SobreMim(){
 
     return(
@@ -38,7 +40,7 @@ function SobreMim(){
                     <h3>Idiomas</h3>
                     <ul>
                         <li>Português: Fluente</li>
-                        <li>Inglês: Avançado</li>
+                        <li>Inglês: Fluente</li>
                         <li>Espanhol: Iniciante</li>
                     </ul>
                 </div>
