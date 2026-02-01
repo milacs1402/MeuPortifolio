@@ -1,5 +1,5 @@
 import React from 'react';
-import foto from '../assets/imgs/fotoHero.png';
+import foto from '/assets/fotoHero.png';
 import SocialIncons from './SocialIcons';
 
 function Hero(){

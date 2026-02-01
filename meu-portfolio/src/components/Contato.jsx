@@ -1,8 +1,8 @@
 import React from "react";
-import pin from "../assets/imgs/pin.png"
-import email from "../assets/imgs/email.png"
-import linkedin from "../assets/imgs/linkedin.png"
-import wpp from "../assets/imgs/wpp.png"
+import pin from "/assets/pin.png"
+import email from "/assets/email.png"
+import linkedin from "/assets/linkedin.png"
+import wpp from "/assets/wpp.png"
 
 function Contato () {
     return(

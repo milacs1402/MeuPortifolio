@@ -1,7 +1,7 @@
 import React from 'react';
-import iconInsta from '../assets/imgs/logotipo-do-instagram.png'
-import iconGithub from '../assets/imgs/github.png'
-import iconLinkedin from '../assets/imgs/linkedin.png'
+import iconInsta from '/assets/logotipo-do-instagram.png'
+import iconGithub from '/assets/github.png'
+import iconLinkedin from '/assets/linkedin.png'
 
 function SocialLinks() {
   return (

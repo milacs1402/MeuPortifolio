@@ -1,5 +1,5 @@
 import React from "react";
-import { projectsData } from "../assets/dados/projectsData";
+import { projectsData } from "../projectsData";
 import ProjectCard from "./ProjectCard";
 
 function Projetos() {

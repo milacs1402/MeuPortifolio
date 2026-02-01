@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import roundIconGit from '../assets/imgs/RoundGitIcon.png'
-import setaE from '../assets/imgs/setaE.png'
-import setaD from '../assets/imgs/setaD.png'
+import roundIconGit from '/assets/RoundGitIcon.png'
+import setaE from '/assets/setaE.png'
+import setaD from '/assets/setaD.png'
 
 function ProjectCard({title, description, image, images, githubLink, techs}) {
     
