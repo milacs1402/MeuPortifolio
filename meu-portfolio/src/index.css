@@ -109,7 +109,7 @@ body {
     align-items: end;
     justify-content: space-between;
     padding: 0 5%;
-    height: 90vh;
+    height: 85vh;
     padding-bottom: 0%;
     box-sizing: border-box;
 }
@@ -445,6 +445,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 3rem;
+  height: 85vh;
 }
 
 .contato{
@@ -551,19 +552,75 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column; /* Empilha um em cima do outro */
-    text-align: center;     /* Centraliza o texto no mobile */
+/* === RESPONSIVO HEADER === */
+@media (max-width: 48rem) { /* ~768px */
+  
+  .cabecalho {
+    flex-direction: column;
+    padding: 1rem;
+    padding-bottom: 8rem;
+    gap: 1rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;              /* Dá um espaço entre o texto e a foto */
+    gap: 0.5rem;
   }
+  
+  .nav-links li {
+    font-size: 0.9rem;
+  }
+  
+  .nav-links a {
+    padding: 0.5rem;
+  }
+}
 
+/* === RESPONSIVO HERO/HOME === */
+@media (max-width: 48rem) {
+  
+  /* Container principal do Hero */
+  .hero {
+    min-height: auto !important; /* remove altura fixa */
+    padding: 1rem 1.5rem 2rem 1.5rem !important;
+    overflow: visible !important;
+  }
+  
+  /* Título grande "Prazer, Camila" */
   .hero-text h1 {
-    font-size: 3rem;        /* Diminui o título para não transbordar no celular */
+    font-size: 3.5rem !important;
+    line-height: 1.2 !important;
+    white-space: normal !important; /* permite quebra natural */
+    word-break: keep-all !important; /* não quebra palavras */
   }
-
-  .hero-text p {
-    font-size: 0.7rem;        /* Diminui o título para não transbordar no celular */
+  
+  /* Subtítulo "Desenvolvedora Front-End" */
+  .hero p {
+    font-size: 1rem !important;
+  }
+  
+  /* Foto */
+  .hero-img img {
+    max-width: 90% !important;
+    height: auto !important;
+    margin: 2rem auto !important;
+    display: block !important;
+  }
+  
+  /* Ícones sociais */
+  .social-container {
+    gap: 1.5rem !important;
+    justify-content: center !important;
+  }
+  
+  .social-container img {
+    width: 2rem !important;
+    height: 2rem !important;
   }
 }

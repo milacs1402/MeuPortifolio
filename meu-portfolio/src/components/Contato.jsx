@@ -30,7 +30,7 @@ function Contato () {
 
                     <div className="contato-item">
                         <img src={email} alt="email-icon" />
-                        <a href="mailto:Camilacs1402@gmail.com">Camilacs1402@gmail.com</a>
+                        <a href="mailto:camilacs1402@gmail.com">Camilacs1402@gmail.com</a>
                     </div>
 
                     <div className="contato-item">
