@@ -19,7 +19,7 @@ function App() {
             case 'home':
               return <Hero />;
             case 'about':
-              return <SobreMim />;
+              return <SobreMim images={['/assets/carrosselPessoal/foto6.jpeg','/assets/carrosselPessoal/foto1.png', '/assets/carrosselPessoal/foto2.jpeg','/assets/carrosselPessoal/foto3.jpeg','/assets/carrosselPessoal/foto4.jpeg','/assets/carrosselPessoal/foto5.jpeg']}/>;
             case 'projects':
               return <Projetos />; 
             case 'contact':

@@ -45,7 +45,7 @@ export const projectsData = [
     },
     {
         id: 4,
-        title: "Portifólio",
+        title: "Portfólio",
         description: "Uma vitrine da minha estética como desenvolvedora. Aqui, explorei a criação de uma identidade visual própria e a implementação de um layout responsivo, transformando o currículo tradicional. Você já está visualizando esse projeto, mas pode clicar aqui embaixo se quiser ver um pouco mais sobre o desenvolvimento ;).",
         image: "/assets/portifolio.png",
         images: [

@@ -51,9 +51,19 @@ body {
 }
 
 .logo{
-    font-family: var(--font-titulos);
-    font-size: 2rem;
-    font-weight: 550;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-titulos);
+  font-size: 2rem;
+  margin-left: -3%;
+  gap: 1rem;
+}
+
+.logo img{
+  width: 3rem;
+  height: 3rem;
 }
 
 .nav-links{
@@ -105,7 +115,6 @@ body {
 
 .hero{
     display: flex;
-    flex-wrap: wrap;
     align-items: end;
     justify-content: space-between;
     padding: 0 5%;
@@ -119,12 +128,12 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 8%;
-    margin-left: 12%;
+    margin-left: 20%;
 }
 
 .hero-text h1{
     font-family: var(--font-titulos);
-    font-size: 10rem;
+    font-size: 7rem;
     line-height: 1;
     margin-bottom: 1rem;
 }
@@ -138,7 +147,7 @@ body {
 
 .hero-img img{
     width: 100%;
-    max-width: 560px;
+    max-width: 450px;
     max-height: 85vh;
     height: auto;
     object-fit: cover;
@@ -146,7 +155,7 @@ body {
 
 .hero-img{
     margin-bottom: 2rem;
-    margin-right: 3rem;
+    margin-right: 14%;
 }
 
 .social-container{
@@ -177,66 +186,114 @@ body {
 
 /* === SEÇÃO DE SOBRE MIM === */
 
-.sobre-mim{
+/* Container Principal */
+.sobre-mim {
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  height: 80vh; /* Ocupa a tela toda menos o header */
+  margin-top: 6vh;
+  padding: 0 5%;
+  gap: 4%;
 }
 
-.sobre-text{
-  padding: 2% 4%;
+.sobre-text {
+  flex: 1; /* Ocupa o espaço necessário na esquerda */
 }
 
-.sobre-text h1{
+.sobre-text h1 {
   font-family: var(--font-titulos);
-  font-size: 7rem;
-  padding-bottom: 2%;
+  font-size: 6rem; /* Reduzi um pouco para não estourar em telas de notebook */
+  margin-bottom: 1rem;
 }
 
-.sobre-text p{
-  font-size: 1.5rem;
-  width: 45vw;
-  padding-bottom: 2%;
+.sobre-text p {
+  font-size: 1.1rem;
+  width: 100%; /* Deixa o flex do pai controlar a largura */
+  max-width: 550px;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-.sobre-cards{
+/* Coluna da Direita (Carrossel + Boxes) */
+.sobre-mim-right {
+  flex: 1.2; 
   display: flex;
   flex-direction: column;
+  gap: 2rem; /* Espaço entre o carrossel e os boxes */
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  color: var(--off-white);
-  margin-right: 3%;
-  margin-top: 2%;
+}
+
+/* Ajuste do Carrossel para as setas ficarem fora */
+.carrossel-pessoal {
+  position: relative;
   width: 100%;
+  max-width: 450px;
 }
 
-.sobre-cards div{
-  background-color: var(--verdinho);
-  padding: 2% 10% 4% 10%;
-  border-radius: 30px;
+.carousel-image {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.carousel-button-prev, .carousel-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-button-prev { left: -60px; }
+.carousel-button-next { right: -60px; }
+
+
+.info-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  width: 100%;
   height: 90%;
-  width: 80%;
-  box-shadow: -6px 8px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.3s ease;
 }
 
-.sobre-cards div:hover{
-  background-color: var(--vinho);
+.info-box {
+  background-color: var(--verdinho);
+  padding: 1rem;
+  border-radius: 25px;
+  color: var(--off-white); 
+  box-shadow: 5px 5px 5px rgb(102, 102, 102);
+  transition: all 0.3s ease;
+}
+
+.info-box:hover{
   transform: translateY(-0.5rem);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); 
+  background-color: var(--vinho);
+  box-shadow: 5px 5px 10px rgb(102, 102, 102);
 }
 
-.sobre-cards h3{
+.info-box h3 {
+  margin-bottom: 0.5rem;
   font-family: var(--font-titulos);
-  text-align: center;
-  font-size: 2rem;
-  padding-bottom: 3%;
 }
 
-.sobre-cards ul{
-  font-size: 1.2rem;
+.info-box ul {
+  list-style: none; /* Tira os pontos da lista */
+  padding-left: 4%;
+  margin: 0;
 }
+
+.info-box li strong {
+  font-weight: 700;
+  display: inline-block; /* Ajuda no alinhamento */
+  margin-right: 4px;
+}
+
+.skills { grid-column: 1; grid-row: 1; }
+.idiomas { grid-column: 1; grid-row: 2; }
+.educacao { grid-column: 2; grid-row: 1 / 3;}
 
 /* === SEÇÃO DE PROJETOS === */
 
@@ -359,11 +416,18 @@ body {
 }
 
 /* === CARROSSEL === */
-.carousel-container {
+.carousel-container, .carrossel-pessoal {
   position: relative;
   width: 100%;
   overflow: hidden;
   border-radius: 1.25rem;
+}
+
+.carrossel-pessoal img{
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
 }
 
 .carousel-image {
@@ -584,33 +648,34 @@ body {
 
 /* === RESPONSIVO HERO/HOME === */
 @media (max-width: 48rem) {
-  
-  /* Container principal do Hero */
+
   .hero {
-    min-height: auto !important; /* remove altura fixa */
-    padding: 1rem 1.5rem 2rem 1.5rem !important;
-    overflow: visible !important;
+    flex-direction: column-reverse; /* foto primeiro, texto depois */
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
   }
   
-  /* Título grande "Prazer, Camila" */
-  .hero-text h1 {
-    font-size: 3.5rem !important;
-    line-height: 1.2 !important;
-    white-space: normal !important; /* permite quebra natural */
-    word-break: keep-all !important; /* não quebra palavras */
+  .hero-text{
+    width: 100%; /* ocupa largura total */
+    margin-left: -2%;
   }
-  
-  /* Subtítulo "Desenvolvedora Front-End" */
-  .hero p {
-    font-size: 1rem !important;
+
+  .hero-text h1{
+    font-size: 5rem;
   }
-  
-  /* Foto */
+
+  .hero-text p{
+    font-size: 1rem;
+  }
+
+  .hero-img{
+    margin-left: 6%;
+  }
+
   .hero-img img {
-    max-width: 90% !important;
-    height: auto !important;
-    margin: 2rem auto !important;
-    display: block !important;
+    margin-top: 8rem;
+    max-width: 80%; /* controla tamanho da foto */
   }
   
   /* Ícones sociais */
@@ -623,4 +688,10 @@ body {
     width: 2rem !important;
     height: 2rem !important;
   }
+}
+
+/* === RESPONSIVO SOBRE MIM === */
+
+@media (max-width: 48rem) {
+
 }

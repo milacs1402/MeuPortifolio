@@ -12,7 +12,10 @@ function Header({ setSection }) {
 
     return(
     <header className="cabecalho">
-      <div className="logo">Camila Silva</div>
+      <div className="logo">
+        <img src="favicon.svg" alt="logo" />
+        Camila Silva
+      </div>
       <nav>
         <ul className="nav-links">
           <li>
