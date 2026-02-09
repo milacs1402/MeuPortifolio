@@ -520,14 +520,14 @@ body {
   max-width: 80rem;
   width: 100%;
   min-height: 25rem;
-  height: 35rem;
+  height: 32rem;
   margin-top: 2%;
 }
 
 .line{
   display: flex;
   align-items: center;
-  margin: 3rem;
+  margin: 2rem;
 }
 
 .line hr{
@@ -598,11 +598,12 @@ body {
 
 .contato-frase h1{
   font-family: var(--font-titulos);
-  font-size: clamp(7rem, 5vw, 4rem);
+  font-size: clamp(6rem, 5vw, 4rem);
   font-weight: 700;
   color: var(--off-white);
   line-height: 1.2;
   text-align: left;
+  padding-left: 2rem;
 }
 
 @keyframes fadeIn {
@@ -621,14 +622,14 @@ body {
   
   .cabecalho {
     flex-direction: column;
-    padding: 1rem;
-    padding-bottom: 8rem;
+    padding: 1rem 1rem 9rem 1rem;
     gap: 1rem;
   }
   
   .logo {
     font-size: 1.5rem;
     text-align: center;
+    padding-top: -1rem;
   }
   
   .nav-links {
@@ -693,5 +694,83 @@ body {
 /* === RESPONSIVO SOBRE MIM === */
 
 @media (max-width: 48rem) {
+  .sobre-mim{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-boxes{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* === RESPONSIVO PROJETOS === */
+
+@media (max-width: 48rem) {
+
+  .projetos h1{
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .projetos{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .projetos-container{
+    gap: 3rem;
+  }
+
+  .project-card{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card:nth-child(even) { /* faz com que todo card par apareça invertido */
+  flex-direction: column;
+}
+
+.card-img{
+  width: 250px;
+}
+
+}
+
+/* === RESPONSIVO CONTATO === */
+
+@media (max-width: 48rem) {
+
+.contato{
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  background-color: var(--off-white);
+  width: 90vw;
+  height: 80vh;
+}
+
+.contato-info{
+  background-color: transparent;
+  overflow: visible;
+  width: 95vw;
+  padding-right: 1.5rem;
+  margin-top: -2.5rem;
+}
+
+.contato-info p{
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contato-frase h1{
+  white-space: normal;
+  font-size: 4rem;
+  line-height: 1.1;
+  text-align: center;
+  padding-right: 2rem;
+  color: var(--verdinho);
+}
 
 }

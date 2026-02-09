@@ -10,7 +10,7 @@ function Contato () {
             <div className="contato">
 
                 <div className="contato-frase">
-                    <h1>Vamos <br />construir <br />algo <br />juntos?</h1>
+                    <h1>Vamos <br />construir <br />algo juntos?</h1>
                 </div>
 
                 <div className="contato-info">
