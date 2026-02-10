@@ -742,35 +742,71 @@ body {
 
 @media (max-width: 48rem) {
 
+.contato-section{
+  height: 80vh;
+  }
+
 .contato{
   display: flex;
   flex-direction: column;
   overflow: visible;
   background-color: var(--off-white);
   width: 90vw;
-  height: 80vh;
+  margin-top: 4rem;
+  background-color: var(--verdinho);
 }
 
 .contato-info{
   background-color: transparent;
   overflow: visible;
-  width: 95vw;
-  padding-right: 1.5rem;
-  margin-top: -2.5rem;
+  margin-top: 0.5rem;
 }
 
 .contato-info p{
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  padding: 0.5rem;
+  width: 18rem;
+  margin-left: 0.8rem;
+  margin-bottom: -2rem;
+  border: 0.125rem solid var(--off-white);
+  border-radius: 1.5rem;
 }
 
 .contato-frase h1{
+  background-color: var(--verdinho);
+  border-radius: 2rem;
   white-space: normal;
-  font-size: 4rem;
+  font-size: 3.1rem;
   line-height: 1.1;
   text-align: center;
   padding-right: 2rem;
-  color: var(--verdinho);
+  padding: 1rem;
+  margin: -5rem 0;
+}
+
+.line hr, .line span{
+  border-top: 0.125rem solid  transparent;
+  background-color: transparent;
+}
+
+.itens{
+  padding-left: 1.4rem;
+}
+
+.contato-item {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.4rem 1rem;
+  border-radius: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--texto);
+  margin-bottom: 1rem;
+  width: 17rem;
+}
+
+.contato-item img{
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 }
