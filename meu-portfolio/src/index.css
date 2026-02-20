@@ -26,7 +26,7 @@ body {
   color: var(--texto);
   margin: 0;
   padding: 0;
-  height: 100vh;    /* garante que o corpo tenha exatamente a altura da tela */
+  min-height: 100vh; /* min-height permite crescer além da tela se necessário */
 }
 
 .main-content{
@@ -116,11 +116,14 @@ body {
 .hero{
     display: flex;
     align-items: end;
-    justify-content: space-between;
+    justify-content: center; /* centraliza o conteúdo */
     padding: 0 5%;
-    height: 85vh;
+    min-height: 85vh; /* min-height permite crescer em telas grandes */
     padding-bottom: 0%;
     box-sizing: border-box;
+    gap: 4rem; /* espaço fixo entre texto e imagem */
+    max-width: 100rem; /* evita esticar demais em TVs */
+    margin: 0 auto; /* centraliza a seção */
 }
 
 .hero-text{
@@ -128,7 +131,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 8%;
-    margin-left: 20%;
+    /* removido margin-left: 20% — usamos gap no pai agora */
 }
 
 .hero-text h1{
@@ -155,7 +158,7 @@ body {
 
 .hero-img{
     margin-bottom: 2rem;
-    margin-right: 14%;
+    /* removido margin-right: 14% — o gap do pai cuida do espaçamento */
 }
 
 .social-container{
@@ -190,11 +193,14 @@ body {
 .sobre-mim {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Centraliza verticalmente o conteúdo */
-  height: 80vh; /* Ocupa a tela toda menos o header */
+  align-items: center;
+  min-height: 80vh; /* min-height evita cortes em telas grandes */
   margin-top: 6vh;
-  padding: 0 5%;
+  padding: 2rem 5%; /* adicionado padding vertical */
   gap: 4%;
+  max-width: 100rem; /* evita esticar em TVs */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sobre-text {
@@ -303,7 +309,7 @@ body {
 }
 
 .projetos h1{
-  font-size: clamp(6rem, 6vw, 4rem);
+  font-size: clamp(3rem, 6vw, 6rem); /* corrigido: min < ideal < max */
   text-align: center;
   margin-bottom: 4rem;
   font-family: var(--font-titulos);
@@ -509,7 +515,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 3rem;
-  height: 85vh;
+  min-height: 85vh; /* min-height evita espaço vazio ou corte em TVs */
 }
 
 .contato{
@@ -520,7 +526,7 @@ body {
   max-width: 80rem;
   width: 100%;
   min-height: 25rem;
-  height: 32rem;
+  /* removido height: 32rem — deixa o conteúdo definir a altura */
   margin-top: 2%;
 }
 
@@ -598,7 +604,7 @@ body {
 
 .contato-frase h1{
   font-family: var(--font-titulos);
-  font-size: clamp(6rem, 5vw, 4rem);
+  font-size: clamp(3rem, 5vw, 6rem); /* corrigido: min < ideal < max */
   font-weight: 700;
   color: var(--off-white);
   line-height: 1.2;
@@ -614,6 +620,32 @@ body {
   to { 
     opacity: 1; 
     transform: translateY(0); /* Sobe para a posição original */
+  }
+}
+
+/* === TELAS GRANDES (TV, monitor widescreen ≥ 1600px) === */
+@media (min-width: 100rem) {
+
+  .hero-text h1 {
+    font-size: clamp(5rem, 6vw, 9rem);
+  }
+
+  .hero-text p {
+    font-size: clamp(1.2rem, 1.5vw, 2rem);
+  }
+
+  .sobre-text h1 {
+    font-size: clamp(4rem, 5vw, 8rem);
+  }
+
+  .sobre-text p {
+    font-size: clamp(1rem, 1.2vw, 1.4rem);
+    max-width: 700px;
+  }
+
+  .cabecalho {
+    max-width: 120rem;
+    margin: 0 auto;
   }
 }
 
