@@ -16,7 +16,7 @@ export const projectsData = [
         techs: ["C#", "Unity", "3D"]
     },
     {
-        id: 2,
+        id: 3,
         title: "Milafy",
         description: "Spotify lookalike desenvolvido durante a Imersão Front-End da Alura. Foquei na componentização de elementos, manipulação dinâmica do DOM com JavaScript e estilização responsiva utilizando conceitos avançados de CSS Grid e Flexbox.",
         image: "/assets/milafy.png",
@@ -29,18 +29,18 @@ export const projectsData = [
         techs: ["HTML5", "CSS3", "JavaScript"]
     },
     {
-        id: 3,
-        title: "Overdle",
-        description: "Um dos meus primeiros projetos explorando React. Embora tenha muitos pontos a melhorar (principalmente em responsividade), foi onde consolidei diversos conceitos, além de ter tido a oportunidade de recriar com meu amigo um dos nossos jogos favoritos.",
-        image: "/assets/overdle/overdle.png",
+        id: 2,
+        title: "EduMeet",
+        description: "Sistema de cadastro e gerenciamento de alunos. O objetivo do projeto não é ser uma aplicação completa, mas sim um ambiente de aprendizado para explorar a comunicação entre frontend e backend. Aqui, implementei funcionalidades como criação, leitura, atualização e exclusão de dados (CRUD) utilizando React para o frontend e uma API REST para o backend, além de aplicar conceitos de gerenciamento de estado e roteamento.",
+        image: "/assets/edumeet/edumeet.png",
         images: [
 
-        "/assets/overdle/overdle.png",
-        "/assets/overdle/overdle2.png",
-        "/assets/overdle/overdle3.png"
+        "/assets/edumeet/edumeet.png",
+        "/assets/edumeet/edumeet2.png",
+        "/assets/edumeet/edumeet3.png"
 
         ],
-        githubLink: "https://github.com/milacs1402/overdle",
+        githubLink: "https://github.com/milacs1402/EduMeet/tree/main",
         techs: ["React", "CSS3", "HTML5", "JavaScript"]
     },
     {
